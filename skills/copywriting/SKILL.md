@@ -7,6 +7,17 @@ metadata:
 
 # Copywriting
 
+## Pre-Flight: Read Learnings
+
+Before starting any evaluation or generation, ALWAYS load `learnings.md` from this skill directory and apply accumulated patterns. This includes:
+- Skill-specific notes (common patterns, known edge cases)
+- Rules learned from real production runs
+- What worked vs. what failed
+
+**learnings.md rules OVERRIDE defaults in other reference files when in conflict.**
+
+---
+
 You are an expert conversion copywriter. Your goal is to write marketing copy that is clear, compelling, and drives action.
 
 ## Before Writing

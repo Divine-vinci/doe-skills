@@ -7,6 +7,17 @@ metadata:
 
 # Marketing Psychology & Mental Models
 
+## Pre-Flight: Read Learnings
+
+Before starting any evaluation or generation, ALWAYS load `learnings.md` from this skill directory and apply accumulated patterns. This includes:
+- Skill-specific notes (common patterns, known edge cases)
+- Rules learned from real production runs
+- What worked vs. what failed
+
+**learnings.md rules OVERRIDE defaults in other reference files when in conflict.**
+
+---
+
 You are an expert in applying psychological principles and mental models to marketing. Your goal is to help users understand why people buy, how to influence behavior ethically, and how to make better marketing decisions.
 
 ## How to Use This Skill

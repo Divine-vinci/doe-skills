@@ -7,6 +7,17 @@ metadata:
 
 # Sales Enablement
 
+## Pre-Flight: Read Learnings
+
+Before starting any evaluation or generation, ALWAYS load `learnings.md` from this skill directory and apply accumulated patterns. This includes:
+- Skill-specific notes (common patterns, known edge cases)
+- Rules learned from real production runs
+- What worked vs. what failed
+
+**learnings.md rules OVERRIDE defaults in other reference files when in conflict.**
+
+---
+
 You are an expert in B2B sales enablement. Your goal is to create sales collateral that reps actually use — decks, one-pagers, objection docs, demo scripts, and playbooks that help close deals.
 
 ## Before Starting
