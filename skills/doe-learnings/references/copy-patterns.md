@@ -1,74 +1,76 @@
 # Copy Patterns — What Works and What Doesn't
 
-This file captures the exact language patterns that worked (or failed) in real DOE outreach. It is updated every week after pulling reply data from `doe_outreach_log`.
-
-As of the first entry (Day 1, April 15 2026), only 2 verified sends have been delivered. Reply data is not yet available. This file will grow rapidly over the 15-day campaign as patterns emerge.
+Updated: April 16, 2026 (Day 2). Based on 4 verified sends (Day 1: Royal Flush, FPP | Day 2: Ardent, Same Day) and the Sav/Nate Herk cold email framework.
 
 ---
 
-## Proven Structure (Day 1 — sent but no reply data yet)
+## The 5-Part Structure (v2 — updated Day 2)
 
-Both Day 1 briefs that passed human review and got sent followed this exact 5-part structure:
+### Part 1: Verified compliment
 
-### Part 1: Open with a verified compliment
-
-Cite the rating and review count from `doe_leads.rating` and `doe_leads.review_count`. These numbers come from Apify's Google Maps scrape — they are always accurate.
+Cite exact rating + review_count from lead data.
 
 **Examples that shipped**:
-- "Saw Royal Flush Plumbing at 4.8 stars with 366 reviews in Fort Worth — reputation is strong."
-- "Saw FPP Plumbing sitting at a perfect 5.0 rating across 82 reviews for Frisco / Plano / McKinney — real reputation for a 24/7 emergency service."
-
-**Why this works**: Using the actual rating + review count signals that the sender has looked at real data about THIS specific business. It is verifiable in 5 seconds by the recipient.
+- "Saw Ardent Plumbing sitting at 4.8 stars with 121 reviews in Plano — that's hard to earn."
+- "Saw Same Day Plumbing sitting at 4.6 stars with 18 reviews in Irving — solid reputation for emergency work."
 
 ---
 
-### Part 2: Bridge with "I looked at your site"
+### Part 2: Honest positioning with named case study
 
-Transition from the compliment to the observation with a phrase that makes it clear the sender personally checked the site.
+Introduce yourself as a peer building something, not a faceless agency. Reference a real business by name.
 
 **Examples that shipped**:
-- "Quick thing I noticed: royalflushplumbers.net is still on http:// not https://."
-- "Pulled up your site on my phone this morning and noticed something worth flagging..."
+- "I'm building out Divine Web — recently helped Same Day Plumbing in Irving tighten up their mobile site and conversion path."
+- "I'm building out Divine Web — recently helped a Fort Worth plumber fix their SSL and mobile conversion path."
 
-**Why this works**: It positions the sender as someone who did real work before emailing. It also pre-frames the observation as helpful, not critical.
+**Why this works**: Pattern disrupt. Most cold emails sound corporate. Saying "I'm building out" signals honesty and sincerity — a real person, not an automation. The named case study provides proof without bragging.
+
+**Rule**: Rotate case study names as real clients accumulate. Never reference a business you haven't actually worked with or sent to.
 
 ---
 
-### Part 3: Specific verified observation
+### Part 3: One verified observation
 
-The core of the email. State ONE specific, verifiable thing you observed — with enough detail that the recipient can confirm it in under 10 seconds.
+State ONE specific, verifiable thing — traceable to real data or manually confirmed during mobile site visit.
 
 **Examples that shipped**:
-- "Chrome shows visitors a 'Not Secure' warning before they even see your phone number." (Royal Flush — verified from `website_url` starting with `http://`)
-- "You've got two phone numbers right at the top — a 980 area code (Charlotte, NC) and a 469 area code (Dallas). Both clickable, both dialing out." (FPP Plumbing — verified on mobile site visit)
+- "Chrome is showing a 'Not Secure' warning before visitors even see your phone number." (Ardent — http:// URL)
+- "The contact form is buried at the very bottom — past your gallery, blogs, and a shopping cart icon." (Ardent — manually verified)
+- "There's no site icon in the browser tab, and the footer still shows last year." (Same Day — manually verified)
 
-**Why this works**: Specificity beats generality. "Your site loads slowly" is generic; "your Google Business Profile lists the 980 number as primary, so anyone calling from Google Maps routes through North Carolina" is specific AND shows depth of research.
-
-**Rule**: Only include specific observations that are either (a) directly sourced from `doe_leads` / `doe_briefs` / `raw_audit_data`, or (b) manually verified by the human reviewer.
+**Rule**: Only include observations sourced from (a) `doe_leads`/`doe_briefs` data, (b) CRO `broken_elements`/`cro_issues`, or (c) human mobile site visit. See `hallucination-traps.md`.
 
 ---
 
-### Part 4: Connect observation to business impact
+### Part 4: Offer with outcome + time + guarantee
 
-Explain why the observed issue matters in language Mike understands. Translate technical → money/calls, but without specific percentages or dollar amounts.
+Frame as: desired outcome + specific timeframe + risk reversal. This is the Sav zero-risk framework.
 
 **Examples that shipped**:
-- "...it spooks them into calling the next guy." (Royal Flush — Not Secure warning)
-- "...'which number is the real one?' is exactly the split-second where they bail and call the next plumber on the list." (FPP — dual phone numbers)
+- "I can turn this into a clean, phone-first site that gets more visitors to call you — 48 hours, and if you don't love it, you don't owe me a thing."
+- "A simple phone-first tweak — tap-to-call above the fold, contact form front and center — would turn more of those visitors into actual calls."
 
-**Why this works**: Mike cares about calls. Every observation must connect to "this costs you calls." Directional language ("the next plumber", "they bail", "split-second") feels real. Specific numbers ("60% bounce rate", "$400/hr") feel made up.
-
-**Rule**: Use directional language, not numerical. See `hallucination-traps.md` Rule 5.
+**Why this works**: Outcome (more calls) + Time (48 hours) + Catch (don't love it = $0) eliminates risk. Strangers respond to cold emails when they perceive zero downside.
 
 ---
 
-### Part 5: Single soft CTA + hardcoded signature
+### Part 5: Loom CTA + hardcoded signature
 
-End with one low-friction ask, then the exact signature block.
+Close with ONE ask: a 2-minute Loom video walkthrough. No other CTA.
 
-**Examples that shipped**:
-- "SSL fix is cheap, usually takes an afternoon. Happy to show you what I mean. Worth a quick call?"
-- "Quick fix. Mind if I send over what I'd change?"
+**The line**:
+> "Mind if I walk you through a 2-minute Loom showing what I'd change?"
+
+**Acceptable variants**:
+- "Mind if I record a quick 2-minute Loom walking you through what I'd change?"
+- "Want me to send over a 2-minute Loom walking you through it?"
+
+**Forbidden CTAs** (do not use):
+- "Worth a quick call?"
+- "Mind if I send over a quick idea?"
+- "Book a strategy call"
+- "Reply if interested"
 
 **Signature (exact, every time)**:
 ```
@@ -76,103 +78,79 @@ End with one low-friction ask, then the exact signature block.
 Divine Web · divineweb.co
 ```
 
-**Rule**: ONE CTA. Not "reply and also book a call and also check my site". Pick the softest ask that still moves the conversation forward.
-
 ---
 
-## Subject Line Patterns (Day 1 sample)
+## Subject Line Patterns (v2 — cliffhanger/internal style)
 
-Only 2 data points so far. Both used lowercase, curiosity-driven, domain-referencing patterns:
+Subject lines should sound like they're from a colleague, team member, or someone who knows the business — not a cold email.
 
-- `quick note on royalflushplumbers.net`
-- `quick thing on fppplumbing.com`
+**Patterns that work**:
+- `saw this on your site`
+- `thought you should know`
+- `[first-name] - quick one`
+- `is [business-name] still taking on work?`
+- `re: [business-name]`
 
-**Pattern**: `[filler word] [noun] on [their domain]`
-
-Alternative patterns to test in later sends:
-- `question about [business-name]`
-- `[rating] stars and your mobile site`
-- `noticed something on your site`
-- `quick thing about [specific-detail]`
+**Day 1 patterns (still valid but lower priority)**:
+- `quick note on [domain]`
+- `quick thing on [domain]`
 
 **To avoid**:
 - "Website redesign for [business]"
-- "Increase your conversions"
 - "Free website audit"
-- "Limited time offer"
-- Anything with TitleCase capitalization
+- Anything with Title Case
 - Anything that sounds like marketing automation
 
 ---
 
 ## Language to Delete
 
-These phrases appeared in AI-generated drafts during Day 1 review and were killed before sending:
-
-| ❌ Delete | Replace with |
+| Delete | Replace with |
 |---|---|
-| "I sketched out a cleaner version" | "I have a specific fix in mind" |
-| "I put together a mockup" | "I can walk through what I'd change" |
-| "I hope this email finds you well" | (delete entirely, open with the compliment) |
-| "I've been following your business" | (delete — it's almost always false) |
-| "Dear Sir/Madam" | "Hi there," |
-| "To whom it may concern" | "Hi there," |
+| "I sketched out a cleaner version" | (use Loom CTA instead) |
+| "I put together a mockup" | (use Loom CTA instead) |
+| "I hope this email finds you well" | (delete — open with compliment) |
+| "Dear Sir/Madam" | (delete — no greeting needed, just open) |
 | "I wanted to reach out regarding..." | (delete — just open with the observation) |
-| "I think we can help..." | (delete — make them conclude you can help) |
+| "We are a leading agency" | "I'm building out Divine Web" |
 | "Revolutionize your online presence" | (delete — pure jargon) |
-| "Leverage cutting-edge technology" | (delete — pure jargon) |
-| "Free consultation" | "Worth a quick call?" |
-| "Limited time offer" | (delete — creates false urgency) |
+| "Free consultation" | Loom CTA |
+| "Worth a quick call?" | Loom CTA |
 
 ---
 
-## Word Count Target
+## Tone: Honest Peer
 
-**Target: 150 words ± 30. Max: 200 words.**
-
-Day 1 briefs that shipped were 155 and 200 words. Both felt short enough to read in under 30 seconds on a phone, which is the reader experience that matters.
-
-**Test**: read the email aloud at normal pace. If it takes more than 45 seconds, it's too long.
+- **Direct** — no filler, no throat-clearing
+- **Honest** — "I'm building out Divine Web" not "We are leaders in..."
+- **Human** — contractions, fragments, casual phrases ("the next plumber on the list")
+- **Humble** — slight vulnerability is a pattern disrupt vs. corporate cold email
+- **Zero-pressure** — the Loom ask is tiny, the guarantee removes risk
 
 ---
 
-## Tone Calibration
+## Metrics to Track (from Sav framework)
 
-The voice is:
-
-- **Direct** — no throat-clearing openers, no filler
-- **Respectful** — never condescending or assumes incompetence
-- **Curious** — "I noticed..." not "You have a problem..."
-- **Helpful** — framing problems as "you'd probably want to know" not "you're doing this wrong"
-- **Human** — uses contractions, sentence fragments, occasional casual phrases ("the next plumber on the list")
-- **Low-effort on their side** — every ask is small ("mind if I send over an idea?" not "book a strategy call")
-
-**Anti-patterns**:
-
-- ❌ Pushy: "You need to fix this NOW"
-- ❌ Condescending: "You may not realize this but..."
-- ❌ Fake urgency: "Before your competitors..."
-- ❌ Over-polite: "I hope you don't mind me reaching out, I completely understand if you're busy..."
+- **<2% reply rate** = lead list or deliverability problem
+- **2-5% reply rate** = copy or offer problem
+- **5-10% reply rate** = golden zone
+- **>10% reply rate** = exceptional
 
 ---
 
 ## Post-Reply Data (to be populated)
 
-As replies come in to Day 1 sends, every reply gets logged in `doe_outreach_log` with `reply_sentiment` and `reply_text`. Every Sunday, the copy patterns from positive replies get extracted here as "proven winners" and the patterns from unsubscribes get logged as "proven losers."
+Every reply logged in `doe_outreach_log`. Every Sunday, winning patterns extracted here, losing patterns logged.
 
-**Target**: By Day 15, this file should have at least 3 confirmed winning patterns and 3 confirmed failing patterns, derived from real reply data.
+**Target**: By Day 15, at least 3 confirmed winning patterns and 3 confirmed failing patterns from real reply data.
 
 ---
 
 ## The Reply Loop
 
-The point of this file is to make every week's briefs better than the last week's, using real reply data — not guesses. The Karpathy autoresearch principle applied to cold email:
-
 1. Send baseline copy
 2. Measure replies
-3. Extract patterns from the winners
+3. Extract patterns from winners
 4. Update this file
-5. Next week, generate copy that follows the winning patterns
+5. Next week's briefs follow winning patterns
 6. Repeat
-
-The system gets smarter at writing emails that get replies, not just emails that read well. The only real measure of copy quality is: did a real plumber reply?
