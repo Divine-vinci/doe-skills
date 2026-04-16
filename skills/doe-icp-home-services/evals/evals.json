@@ -3,77 +3,73 @@
   "evals": [
     {
       "id": 1,
-      "prompt": "Generate a cold email to Mike's Plumbing in Dallas, TX. Their website loads in 9.2 seconds on mobile (PageSpeed score 28), has no click-to-call button, and their Google rating is 4.6 stars with 87 reviews. The demo site URL is https://divine-demos.vercel.app/demo/mikes-plumbing-dallas-a1b2.",
-      "expected_output": "Should reference Mike the Plumber profile and write in plain English, not technical jargon. Subject line should include business name and be under 6 words. Body should reference the 9-second load time in business terms (lost customers, not 'PageSpeed score'). Should mention the demo link. CTA should be zero-friction ('worth a look?' not 'book a call'). Total length should be under 75 words. Should NOT use 'I hope this email finds you well,' technical jargon, or hard-sell language.",
+      "prompt": "Generate a cold email to Ardent Plumbing LLC in Plano, TX. 4.8 stars, 121 reviews. Website: http://ardentplumbing.com/. No SSL. CRO findings: contact form buried at bottom, cart icon present, chatbot popup. PageSpeed: 59. Owner email: micah@micahrich.com.",
+      "expected_output": "Should follow 5-part structure: verified compliment (4.8/121), honest positioning with case study name, one verified observation (no SSL or buried form), offer with outcome+time+guarantee, Loom CTA. Should NOT fabricate load times or UI bugs not in CRO data. Signature must be exact. 150-200 words.",
       "assertions": [
-        "References business name in subject line",
-        "Subject line is under 6 words, lowercase",
-        "Body opens with observation about THEIR business, not self-introduction",
-        "Translates technical findings into business impact",
-        "Includes the demo URL",
-        "CTA is zero-friction (e.g., 'worth a look?')",
-        "Total body under 75 words",
-        "No forbidden phrases (hope this email, leverage, etc.)",
-        "Does not use 'book a call' or 'schedule a demo'",
-        "Reads like a peer, not a vendor"
-      ],
-      "files": []
+        "Opens with verified compliment citing 4.8 stars and 121 reviews",
+        "Part 2 includes honest positioning with a named case study business",
+        "Observation traceable to real data (no SSL or CRO findings)",
+        "Offer includes outcome + time (48 hours) + guarantee (don't love it = $0)",
+        "Closes with Loom CTA (2-minute Loom walkthrough)",
+        "Signature exact: — Ola Oluwaseun / Divine Web · divineweb.co",
+        "150-200 words total",
+        "No fabricated load times or percentages",
+        "No technical jargon (PageSpeed, CRO, responsive)",
+        "Tone reads as honest peer, not corporate vendor"
+      ]
     },
     {
       "id": 2,
-      "prompt": "Write a sales brief for Jackson HVAC in Austin, TX. Their website has a PageSpeed mobile score of 22, no SSL certificate, no contact form, and loads in 11 seconds. They have 4.5 stars with 43 reviews and appear to be running Google Ads to their homepage.",
-      "expected_output": "Should write the brief in plain English following the Mike the Plumber language rules. Should quantify the impact (e.g., 'losing half their ad traffic'). Should be 3-4 sentences following the pain → cost → solution → outcome structure from sales-enablement. Should NOT use jargon like 'PageSpeed,' 'SSL,' 'responsive' — translate to plain English.",
+      "prompt": "Generate subject lines for a cold email to Jake the Plumbing Pro in Dallas. 4.8 stars, 170 reviews.",
+      "expected_output": "Should generate 3 subject lines in cliffhanger/internal style. Should sound like a colleague or someone who knows the business. NO Title Case, NO 'Free audit', NO marketing language.",
       "assertions": [
-        "Opens with specific business problem, not technical term",
-        "Quantifies the impact in business terms (lost calls, wasted ad spend)",
-        "Mentions the SSL warning in plain English ('Not Secure')",
-        "Mentions load time in seconds, not PageSpeed score",
-        "Suggests what a better site would do (more calls, better ad ROI)",
-        "3-4 sentences total",
-        "Uses conversational tone, not marketing-speak"
-      ],
-      "files": []
+        "3 subject lines generated",
+        "All lowercase or sentence case",
+        "At least one sounds like an internal team message",
+        "None contain 'website redesign', 'free audit', or marketing language",
+        "Under 60 characters each",
+        "Creates curiosity or cliffhanger effect"
+      ]
     },
     {
       "id": 3,
-      "prompt": "Generate a call preparation brief for a warm lead. The business is Dallas Elite Plumbing, owner is Tom. He replied to our cold email saying 'interesting, how much does it cost?' The website loads in 8 seconds, has no click-to-call, and they're running Google Ads.",
-      "expected_output": "Should provide opening line referencing his specific reply ('You asked about pricing...'). Should list top pain points from the brief. Should anticipate objections (especially 'I've been burned before' and 'How much does this cost?'). Should suggest $500 price point with framing. Should reference the objection-scripts.md patterns.",
+      "prompt": "Generate a cold email for Premier Plumbing Solutions in Irving. 5.0 stars, 30 reviews. PageSpeed: 49. CRO: site not fully mobile responsive, quote form has phone+email+message+reCAPTCHA. No owner name. Email: premierplumbingsolution@gmail.com.",
+      "expected_output": "Should cite real PageSpeed score of 49 in business terms. Should reference CRO findings about the form. Should include zero-risk offer and Loom CTA. Should NOT invent additional UI bugs not in CRO data.",
       "assertions": [
-        "Opening line references his specific reply",
-        "Lists 3+ pain points specific to his business",
-        "Anticipates likely objections with responses",
-        "Suggests $500 price with ROI framing",
-        "Includes fallback to $300 if he balks",
-        "References Google Ads spend as anchor for pricing",
-        "Provides clear next steps for the call"
-      ],
-      "files": []
+        "Cites PageSpeed 49 in business terms (not raw score)",
+        "References form complexity from CRO data",
+        "Does NOT fabricate UI bugs not in CRO findings",
+        "Includes offer with outcome+time+guarantee",
+        "Closes with Loom CTA",
+        "Honest positioning with case study name",
+        "No forbidden phrases or jargon"
+      ]
     },
     {
       "id": 4,
-      "prompt": "Evaluate this lead for outreach: 'Dallas Marketing Plumbers LLC, 4.9 stars, 247 reviews, modern-looking website from 2025, Google Ads active, business has 'Marketing' in the name.'",
-      "expected_output": "Should recognize this as a hard disqualifier. Should cite that (1) business has 'marketing' in name (will argue with suggestions), (2) already has modern website (pain_score likely < 30), (3) 4.9 stars with 247 reviews = they're doing fine. Should recommend SKIPPING this lead, not outreach.",
+      "prompt": "Evaluate this lead: Service Squad Plumbing, 4.9 stars, 1384 reviews, website URL contains /locations/fort-worth-tx-plumbing/.",
+      "expected_output": "Should disqualify immediately. Pattern 1: review_count > 1000. Pattern 2: /locations/ in URL indicates franchise. Should NOT pass to scoring.",
       "assertions": [
-        "Identifies 'marketing' in business name as red flag",
-        "Recognizes modern website as disqualifier",
-        "Flags high review count + high rating as 'doing fine'",
-        "Recommends skipping the lead",
-        "Cites red-flags.md reference"
-      ],
-      "files": []
+        "Identifies review_count > 1000 as hard disqualifier",
+        "Identifies /locations/ URL pattern as franchise indicator",
+        "Returns status disqualified",
+        "Does NOT assign a high ICP fit score",
+        "Cites specific doe-learnings pattern numbers"
+      ]
     },
     {
       "id": 5,
-      "prompt": "Mike replied to our cold email saying 'My nephew built my current site.' What's the response?",
-      "expected_output": "Should use the exact 'My nephew built it' objection script from objection-scripts.md. Should NOT badmouth the nephew. Should frame it as 'business has evolved' not 'nephew sucks.' Should suggest seeing the demo as a comparison with no pressure.",
+      "prompt": "Generate a cold email for a lead with pagespeed_mobile: NULL, load_time_ms: NULL. Business: Tom's Plumbing Inc, Arlington TX, 4.4 stars, 85 reviews. CRO: has_contact_form=true, has_cta=true, has_click_to_call=false, design_score=4.",
+      "expected_output": "Should NOT cite any specific load time or seconds value since pagespeed is NULL. Should use generic language about mobile experience. Should reference CRO finding of no click-to-call. Should include full 5-part structure.",
       "assertions": [
-        "Does not badmouth the nephew",
-        "Frames as business evolution, not nephew criticism",
-        "Mentions 'no pressure to switch'",
-        "Suggests viewing demo as comparison",
-        "Keeps response short and respectful"
-      ],
-      "files": []
+        "Does NOT cite any specific load time or seconds",
+        "Uses generic mobile language if mentioning speed at all",
+        "References no click-to-call from CRO data",
+        "Includes verified compliment with 4.4/85",
+        "Includes offer with outcome+time+guarantee",
+        "Closes with Loom CTA",
+        "Signature exact"
+      ]
     }
   ]
 }
