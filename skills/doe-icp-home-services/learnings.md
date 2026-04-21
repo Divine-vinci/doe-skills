@@ -64,8 +64,10 @@ Always: — Ola Oluwaseun / Divine Web · divineweb.co. Never [Your Name], never
 - Loom CTA ("2-minute Loom showing what I'd change") is lower friction than any call/meeting ask
 - Cliffhanger subject lines ("saw this on your site", "thought you should know") outperform domain-referencing patterns
 
-### HTTP → HTTPS redirect trap
-Scout stores pre-redirect URLs (e.g., `http://samedayplumbing.pro/`). The site may auto-redirect to HTTPS. Always verify SSL claim on mobile before claiming "Not Secure". Evidence: Same Day Plumbing showed HTTPS on Safari despite http:// in database.
+### HTTP → HTTPS redirect trap (FIXED in pipeline, still verify)
+Scout stores pre-redirect URLs from Apify (e.g., `http://samedayplumbing.pro/`). The site may auto-redirect to HTTPS. Pipeline now uses PageSpeed API's `finalUrl` (post-redirect) to determine `has_ssl` instead of the stored URL. But still verify on mobile before sending — belt and suspenders.
+
+Evidence: Same Day Plumbing showed HTTPS on Safari despite `http://` in database. Don the Plumber LLC same issue — Apify stored `http://`, site redirects to `https://`, connection is secured. Both would have been false "Not Secure" claims.
 
 ### Verified observations that shipped
 - No SSL (Chrome "Not Secure" warning) — verifiable from data
