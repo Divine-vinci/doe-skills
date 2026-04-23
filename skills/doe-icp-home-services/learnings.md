@@ -34,6 +34,22 @@ Last updated: April 16, 2026 (Day 2)
 - Has a website but it feels template-built, DIY, or neglected
 - Rating 4.3-5.0
 
+### 8. Commercial/B2B plumbers — DISQUALIFY (Apr 23)
+
+A plumber/HVAC/electrician business that serves commercial clients (GCs, developers, property managers, hotels, multi-family buildings) is NOT Mike the Plumber. Our pitch ("homeowner backing out and calling the next plumber") doesn't land.
+
+**Signals to detect**:
+- Homepage hero shows named commercial buildings/projects (e.g., "The Bowie", "Skyloft")
+- "Featured projects" or "Our work" section lists high-rises, hotels, offices
+- Services menu mentions "commercial plumbing", "industrial", "construction services", "tenant improvement", "ground-up"
+- "Clients" section shows logos of construction/development companies
+- About/hero copy uses "GC", "general contractor", "RFQ", "spec", "bid"
+- B2B language: "send plans", "request a bid", "commercial inquiry"
+
+**Real evidence**: Biggs Plumbing Austin — 4.9/23 reviews, owner-operator naming, passed all v1 filters. Human Claude-in-Chrome verification revealed hero shows "The Bowie / Skyloft / 70 Rainey" high-rise projects. This is a B2B commercial subcontractor. Our residential Mike-the-Plumber pitch would have read totally wrong to them.
+
+**Implementation**: Add to ICP Filter Agent prompt + detect in Scout v2's Firecrawl markdown scan. If commercial signals detected, deprioritize to 20 points (disqualify unless score >80 from other factors).
+
 ---
 
 ## Hallucination Learnings
