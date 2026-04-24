@@ -80,6 +80,28 @@ Always: — Ola Oluwaseun / Divine Web · divineweb.co. Never [Your Name], never
 - Loom CTA ("2-minute Loom showing what I'd change") is lower friction than any call/meeting ask
 - Cliffhanger subject lines ("saw this on your site", "thought you should know") outperform domain-referencing patterns
 
+### Self-mention rule (adopted Apr 24) — CRITICAL
+
+The brief must feel like a peer flagging a business problem, not a pitch.
+
+**Keep self-mentions to ONE short clause, max.** Acceptable: "I'm Ola, I build websites for local shops." Never acceptable: a dedicated paragraph explaining Divine Web's history, or another client's story folded into the opener.
+
+**Structure the brief as**:
+1. **Opening observation** — something specific about THEIR business (reviews, services visible on site, copyright year, rating). No mention of us yet.
+2. **The problem in their customer's language** — not "your site has X issue" but "when a homeowner at 9pm does Y, this is what happens." Describe their prospect's experience, not our technical audit.
+3. **Offer** — outcome + time + guarantee, 1-2 sentences max.
+4. **CTA** — 2-minute Loom.
+
+**Remove entirely from the brief body**:
+- Named case studies in the opening ("recently helped Same Day Plumbing…")
+- "I'm building out Divine Web" framing as a full sentence — if mentioned at all, fold into the offer clause
+- Any resume/credentials language
+- "We specialize in…", "our team…", "we help businesses like yours…"
+
+Save all of that for the reply thread if they ask what we do.
+
+**Self-test before shipping a brief**: if you remove the signature, can the reader still tell this came from a vendor? If yes → trim until no.
+
 ### HTTP → HTTPS redirect trap (FIXED in pipeline, still verify)
 Scout stores pre-redirect URLs from Apify (e.g., `http://samedayplumbing.pro/`). The site may auto-redirect to HTTPS. Pipeline now uses PageSpeed API's `finalUrl` (post-redirect) to determine `has_ssl` instead of the stored URL. But still verify on mobile before sending — belt and suspenders.
 
