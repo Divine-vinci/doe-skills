@@ -34,6 +34,25 @@ Last updated: April 16, 2026 (Day 2)
 - Has a website but it feels template-built, DIY, or neglected
 - Rating 4.3-5.0
 
+### 9. NULL review_count from public-DB harvest (Apr 24)
+
+When a lead arrives from the public-database harvest path (TSBPE/TDLR — `source = 'public_db'`), `review_count` and `rating` will be NULL — these businesses aren't necessarily on Google Maps.
+
+**Do not auto-disqualify on missing review data.** Apply this fallback logic:
+- `review_count IS NULL` → skip the standard 50-250 sweet-spot check entirely
+- Score on: `license_class` (confirms niche), website existence (HTTPS probe passed), name pattern (owner-operator naming = positive signal), `license_owner_first_name` populated (high personalization value)
+- A licensed Texas plumber with `license_match: true`, a working website, and an owner first name is a STRONG lead even with no review signal
+
+### 10. Corporate keyword disqualifier (Apr 24)
+
+Even from the license tables, business names containing these keywords AND a license issued within the last 5 years signal a chain/franchise structure where the local manager can't approve a website change:
+
+`Services Inc, Group, Corporate, Holdings, Enterprise, Industries, National, Regional, Franchise`
+
+**Auto-disqualify these regardless of review_count.**
+
+Evidence: TDLR contains "AMERICAN RESIDENTIAL SERVICES" (ARS / Rescue Rooter parent) — looks like a single business in license records, is actually a multi-state corp with thousands of employees. Cold-emailing them is noise.
+
 ### 8. Commercial/B2B plumbers — DISQUALIFY (Apr 23)
 
 A plumber/HVAC/electrician business that serves commercial clients (GCs, developers, property managers, hotels, multi-family buildings) is NOT Mike the Plumber. Our pitch ("homeowner backing out and calling the next plumber") doesn't land.
