@@ -99,27 +99,55 @@ Always: — Ola Oluwaseun / Divine Web · divineweb.co. Never [Your Name], never
 - Loom CTA ("2-minute Loom showing what I'd change") is lower friction than any call/meeting ask
 - Cliffhanger subject lines ("saw this on your site", "thought you should know") outperform domain-referencing patterns
 
-### Self-mention rule (adopted Apr 24) — CRITICAL
+### Sav framework — refined structure (adopted Apr 25) — CRITICAL OVERRIDE
 
-The brief must feel like a peer flagging a business problem, not a pitch.
+This SUPERSEDES all prior brief-tone rules. Follow this 5-part structure exactly. Stay creative WITHIN the structure — don't reinvent the structure.
 
-**Keep self-mentions to ONE short clause, max.** Acceptable: "I'm Ola, I build websites for local shops." Never acceptable: a dedicated paragraph explaining Divine Web's history, or another client's story folded into the opener.
+**5-Part Email Body**:
 
-**Structure the brief as**:
-1. **Opening observation** — something specific about THEIR business (reviews, services visible on site, copyright year, rating). No mention of us yet.
-2. **The problem in their customer's language** — not "your site has X issue" but "when a homeowner at 9pm does Y, this is what happens." Describe their prospect's experience, not our technical audit.
-3. **Offer** — outcome + time + guarantee, 1-2 sentences max.
-4. **CTA** — 2-minute Loom.
+1. **Opening observation** — one specific, true thing about THEIR business (review count + rating, named services visible on the site, copyright year, etc.). No mention of us yet.
 
-**Remove entirely from the brief body**:
-- Named case studies in the opening ("recently helped Same Day Plumbing…")
-- "I'm building out Divine Web" framing as a full sentence — if mentioned at all, fold into the offer clause
-- Any resume/credentials language
-- "We specialize in…", "our team…", "we help businesses like yours…"
+2. **Polite self-introduction** — exactly one sentence, framed as the agency, not the individual:
+   > "I'm Ola, building Divine — a small web design agency for local trades."
 
-Save all of that for the reply thread if they ask what we do.
+   Variations are fine ("...for local home-service businesses", "for plumbers and HVAC shops in Texas") but always:
+   - "Divine" framed as **the agency we're building** (not "I do websites")
+   - Introduces Ola once, then refers to Divine
+   - Never name-drops past clients in the opener
 
-**Self-test before shipping a brief**: if you remove the signature, can the reader still tell this came from a vendor? If yes → trim until no.
+3. **The problem in their customer's language** — describe the prospect's experience, not a technical audit. "When a homeowner with a leak lands on your site at 9pm on a phone, [specific friction]." Use the CRO findings to ground this in real observed issues.
+
+4. **Offer — explicit 48-hour turnaround + zero-risk guarantee**, in 1-2 sentences:
+   > "I can rebuild your homepage in 48 hours focused on [specific outcome — tap-to-call, simple form, etc.]. If it doesn't feel like a clear upgrade, you don't owe me anything."
+
+   The phrase "**48 hours**" must appear. The phrase "**you don't owe me anything**" (or "you don't owe me a thing") must appear.
+
+5. **Loom CTA — exact phrasing**:
+   > "Would you mind if I share a 2-minute Loom video showing what I would change?"
+
+   Minor variants OK ("Would it be useful if I shared..." / "Cool if I share..."), but ALWAYS:
+   - "2-minute Loom"
+   - "showing what I would change" (or "walking through what I'd change")
+   - Always a question, never a statement
+
+6. **Signature** — hardcoded, never invented:
+   > — Ola Oluwaseun
+   > Divine Web · divineweb.co
+
+**Banned in the body**:
+- Past client names in the opener ("recently helped Same Day Plumbing…") — save for replies
+- Multi-sentence paragraphs about Divine's history, team, or specialty
+- "We specialize in…", "our team…", "leveraging…", "synergy"
+- Any technical jargon (PageSpeed, responsive, conversion-rate, CRO, SEO)
+
+**Self-test before shipping**:
+- Does the brief contain "Divine" exactly once or twice? ✓
+- Does it explicitly mention "48 hours"? ✓
+- Does it explicitly mention "2-minute Loom"? ✓
+- Does it open with THEIR business, not us? ✓
+- Is "I'm Ola, building Divine — a [agency framing]" in there? ✓
+
+If any of those fail → rewrite.
 
 ### HTTP → HTTPS redirect trap (FIXED in pipeline, still verify)
 Scout stores pre-redirect URLs from Apify (e.g., `http://samedayplumbing.pro/`). The site may auto-redirect to HTTPS. Pipeline now uses PageSpeed API's `finalUrl` (post-redirect) to determine `has_ssl` instead of the stored URL. But still verify on mobile before sending — belt and suspenders.
