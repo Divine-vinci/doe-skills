@@ -99,55 +99,65 @@ Always: — Ola Oluwaseun / Divine Web · divineweb.co. Never [Your Name], never
 - Loom CTA ("2-minute Loom showing what I'd change") is lower friction than any call/meeting ask
 - Cliffhanger subject lines ("saw this on your site", "thought you should know") outperform domain-referencing patterns
 
-### Sav framework — refined structure (adopted Apr 25) — CRITICAL OVERRIDE
+### Sav framework — CANONICAL STANDARD (re-adopted Apr 25) — CRITICAL OVERRIDE
 
-This SUPERSEDES all prior brief-tone rules. Follow this 5-part structure exactly. Stay creative WITHIN the structure — don't reinvent the structure.
+This is THE format. Be creative on observations, phrasing, and language flavor — but the **5-part structure and required phrases are non-negotiable**. SUPERSEDES all earlier brief-tone rules.
 
-**5-Part Email Body**:
+**Reference example (Quality Climate, real email that shipped — match this structure):**
 
-1. **Opening observation** — one specific, true thing about THEIR business (review count + rating, named services visible on the site, copyright year, etc.). No mention of us yet.
+```
+Saw Quality Climate sitting at 4.7 stars on Google with 12 reviews in Kingwood — that doesn't happen unless you're taking care of people.
 
-2. **Polite self-introduction** — exactly one sentence, framed as the agency, not the individual:
-   > "I'm Ola, building Divine — a small web design agency for local trades."
+I'm building out Divine Web — recently helped Same Day Plumbing in Irving tighten up their mobile site and conversion path.
 
-   Variations are fine ("...for local home-service businesses", "for plumbers and HVAC shops in Texas") but always:
-   - "Divine" framed as **the agency we're building** (not "I do websites")
-   - Introduces Ola once, then refers to Divine
-   - Never name-drops past clients in the opener
+Quick thing I noticed on your site: your 832-262-3253 number at the top isn't a tap-to-call link on mobile (homeowner has to copy-paste it), the logo in your header is showing as a broken image, and the brand strip in your footer still lists old partners with typos ('Kolher', 'Crarier'). Paired with an Angie's List 2016 badge and no reviews on the homepage, that's just enough friction for a homeowner to back out and call the next company on Google instead of you.
 
-3. **The problem in their customer's language** — describe the prospect's experience, not a technical audit. "When a homeowner with a leak lands on your site at 9pm on a phone, [specific friction]." Use the CRO findings to ground this in real observed issues.
+I can turn this into a clean, phone-first site that gets more visitors to call you — 48 hours, and if you don't love it, you don't owe me a thing.
 
-4. **Offer — explicit 48-hour turnaround + zero-risk guarantee**, in 1-2 sentences:
-   > "I can rebuild your homepage in 48 hours focused on [specific outcome — tap-to-call, simple form, etc.]. If it doesn't feel like a clear upgrade, you don't owe me anything."
+Mind if I walk you through a 2-minute Loom showing what I'd change?
 
-   The phrase "**48 hours**" must appear. The phrase "**you don't owe me anything**" (or "you don't owe me a thing") must appear.
+— Ola Oluwaseun
+Divine Web · divineweb.co
+```
 
-5. **Loom CTA — exact phrasing**:
-   > "Would you mind if I share a 2-minute Loom video showing what I would change?"
+**The 5 parts (be creative on content, lock the structure):**
 
-   Minor variants OK ("Would it be useful if I shared..." / "Cool if I share..."), but ALWAYS:
-   - "2-minute Loom"
-   - "showing what I would change" (or "walking through what I'd change")
-   - Always a question, never a statement
+1. **Hook line** — opens with `"Saw [Business Name] [observation]..."` or similar past-tense observation. Specific data: rating, review count, city, named service. Closes with a small compliment grounded in the data ("that doesn't happen unless you're taking care of people", "that's a lot of trust to earn", etc.). Vary the wording.
 
-6. **Signature** — hardcoded, never invented:
-   > — Ola Oluwaseun
-   > Divine Web · divineweb.co
+2. **Honest positioning** — exactly one sentence. **Required phrase**: `"I'm building out Divine Web"`. Followed by a brief past-tense case study: `"— recently helped [past client] in [city] [what we did]"`. Acceptable past clients to name: **Same Day Plumbing in Irving**. Don't invent fake clients. If no real prior client fits, drop the case-study clause and just say `"I'm building out Divine Web — small agency focused on [niche]."`.
 
-**Banned in the body**:
-- Past client names in the opener ("recently helped Same Day Plumbing…") — save for replies
-- Multi-sentence paragraphs about Divine's history, team, or specialty
+3. **The problem (concrete, customer-perspective)** — start with `"Quick thing I noticed on your site:"` or `"Quick thing I noticed:"`. Then enumerate specific issues from CRO findings (tap-to-call missing, broken images, outdated badges, typos, footer year, etc.). Close by framing the consequence in customer terms: `"...just enough friction for a homeowner to back out and call the next company on Google instead of you."` Vary the close, but always frame the cost as lost calls / lost customers, never as technical debt.
+
+4. **Offer** — `"I can turn this into a clean, phone-first site that gets more visitors to call you — 48 hours, and if you don't love it, you don't owe me a thing."` Required phrases: **"48 hours"** and **"don't owe me a thing"** (or "don't owe me anything"). The outcome before the dash should be specific to their business.
+
+5. **Loom CTA** — `"Mind if I walk you through a 2-minute Loom showing what I'd change?"` Acceptable minor variants: `"Cool if I record a 2-minute Loom showing what I'd change?"` / `"Would it be useful if I shared a 2-minute Loom..."`. Always a question. Always **"2-minute Loom"**. Always **"what I'd change"** (or "what I would change").
+
+6. **Signature** — hardcoded:
+   ```
+   — Ola Oluwaseun
+   Divine Web · divineweb.co
+   ```
+
+**Required phrases checklist** (if any are missing, the brief is wrong):
+- [ ] "I'm building out Divine Web"
+- [ ] "48 hours"
+- [ ] "don't owe me a thing" / "don't owe me anything"
+- [ ] "2-minute Loom"
+- [ ] "what I'd change" / "what I would change"
+- [ ] Signature exactly: `— Ola Oluwaseun \n Divine Web · divineweb.co`
+
+**Banned**:
+- "I'm Ola, [...]" — never introduce as a person; introduce as Divine Web (agency framing)
+- "Divine — a web design agency" — wrong brand. Always **"Divine Web"**.
+- Technical jargon (PageSpeed, conversion-rate, CRO, SEO, responsive)
 - "We specialize in…", "our team…", "leveraging…", "synergy"
-- Any technical jargon (PageSpeed, responsive, conversion-rate, CRO, SEO)
+- Inventing case studies that don't exist
 
-**Self-test before shipping**:
-- Does the brief contain "Divine" exactly once or twice? ✓
-- Does it explicitly mention "48 hours"? ✓
-- Does it explicitly mention "2-minute Loom"? ✓
-- Does it open with THEIR business, not us? ✓
-- Is "I'm Ola, building Divine — a [agency framing]" in there? ✓
-
-If any of those fail → rewrite.
+**Creativity zone (flex here, not on structure):**
+- Different hook openers ("Saw...", "Came across...", "Was looking at...", "Noticed [business] just hit X reviews...")
+- Different specific observations for problem section (CRO findings should drive this — every brief gets different ones)
+- Different consequence framings ("homeowner with a leak at 9pm...", "someone shopping for a new HVAC in 110° heat...", "a busy mom trying to book...")
+- Different outcome phrasings in offer ("phone-first site that converts...", "cleaner mobile path that gets more calls...", "homepage built around tap-to-call...")
 
 ### HTTP → HTTPS redirect trap (FIXED in pipeline, still verify)
 Scout stores pre-redirect URLs from Apify (e.g., `http://samedayplumbing.pro/`). The site may auto-redirect to HTTPS. Pipeline now uses PageSpeed API's `finalUrl` (post-redirect) to determine `has_ssl` instead of the stored URL. But still verify on mobile before sending — belt and suspenders.
